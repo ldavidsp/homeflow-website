@@ -1,0 +1,72 @@
+{
+    "name": "homeflow",
+    "version": "0.1.0",
+    "private": true,
+    "main": "public/electron.js",
+    "description": "Homeflow",
+    "author": {
+        "name": "Luis Solorzano",
+        "email": "luisnic20@gmail.com"
+    },
+    "copyright": "Copyright © Luis Solorzano",
+    "homepage": "./",
+    "license": "MIT",
+    "productName": "Homeflow App",
+    "dependencies": {
+        "@babel/cli": "^7.2.0",
+        "@babel/core": "^7.2.0",
+        "@babel/polyfill": "^7.0.0",
+        "@babel/preset-env": "^7.2.0",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/register": "^7.0.0",
+        "bootstrap": "^4.3.1",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.6",
+        "sweetalert": "^2.1.2",
+        "uuid": "^3.3.2"
+    },
+    "devDependencies": {
+        "del": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-clean-css": "^4.0.0",
+        "gulp-sass": "^4.0.2"
+    },
+    "scripts": {
+        "dev": "gulp dev",
+        "build": "gulp build",
+        "start-electron": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+        "release": "yarn build-style && yarn build && electron-builder --publish onTag"
+    },
+    "build": {
+        "appId": "com.turingcode.zoneg",
+        "directories": {
+            "output": "release",
+            "buildResources": "assets"
+        },
+        "mac": {
+            "category": "com.homeflow.category.Utility"
+        },
+        "linux": {
+            "category": "com.homeflow.category.Utility",
+            "target": [
+                "AppImage",
+                "snap",
+                "deb",
+                "tar.gz"
+            ],
+            "maintainer": "Luis Solorzano",
+            "executableName": "zoneg",
+            "synopsis": "Zoneg App",
+            "description": "Zoneg de negocios Nicaragua"
+        }
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Homeflow Bold";
+  src: url("../webfonts/gsb.ttf");
+}
+
+@font-face {
+  font-family: "Homeflow Medium";
+  src: url("../webfonts/gsm.ttf");
+}
+
+@font-face {
+  font-family: "Homeflow regular";
+  src: url("../webfonts/gsr.ttf");
+}
+
+.homeflow-bold {
+  font-family: "Homeflow Bold", sans-serif;
+}
+
+.homeflow-medium {
+  font-family: "Homeflow Medium", sans-serif;
+}
+
+.homeflow-regular {
+  font-family: "Homeflow regular", sans-serif;
+}
+
