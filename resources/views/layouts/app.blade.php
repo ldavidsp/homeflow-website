@@ -7,16 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Homeflow') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}" defer></script>
     <script src="{{ asset('assets/js/homepage.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"
-          type="text/css">
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -46,16 +41,22 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
-                        <li class="nav-item">
-                            <a class="nav-link homeflow-medium"
+                        {{--<li class="nav-item">
+                            <a class="nav-link homeflow-medium text-dark"
                                style="font-size: 15px;"
-                               href="{{ route('login') }}">{{ __('Funciones') }}</a>
+                               href="{{ url('business') }}">{{ __('Business') }}</a>
+                        </li>--}}
+                        
+                        <li class="nav-item">
+                            <a class="nav-link homeflow-medium text-dark"
+                               style="font-size: 15px;"
+                               href="{{ url('signin') }}">{{ __('Conectarse') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link homeflow-medium"
+                                <a class="nav-link homeflow-medium text-homeflow"
                                    style="font-size: 15px;"
-                                   href="{{ route('register') }}">{{ __('Conectarse') }}</a>
+                                   href="{{ route('register') }}">{{ __('Crear tu espacio de trabajo') }}</a>
                             </li>
                         @endif
                     @else

@@ -12,6 +12,18 @@
 */
 
 Route::get('/', function () {
+    return view('domain.homepage.homepage');
+});
+
+Route::get('/signin', function () {
+    return view('domain.signin.signin');
+});
+
+Route::post('/signin', function () {
+    return view('domain.signin.signin');
+});
+
+Route::get('/business', function () {
     return view('homepage.homepage');
 });
 
