@@ -7,7 +7,8 @@
             <div class="row">
                 <div class="col-md-6 mt-5">
                     <h1 class="font-weight-bold text-black homeflow-medium mt-5">
-                        Crea tus listas en cualquier momento.
+                        {{--Crea tus listas en cualquier momento.--}}
+                        Te damos la bienvenida a Homeflow.
                     </h1>
                     
                     <p class="header-subtitle mt-4 homeflow-regular">
@@ -20,14 +21,14 @@
                     </a>--}}
                     
                     <div class="col-12">
-                        <a href="" target="_blank">
+                        <a href="https://play.google.com/store/apps/details?id=com.homeflow" target="_blank">
                             <img src="/assets/img/phone/play.png" alt="Play Store">
                         </a>
                     </div>
                 </div>
                 
                 <div class="col-md-6 mt-5">
-                    <img src="/assets/img/phone/homeflow.png" class="mx-auto" style="width: 16rem;transform: rotate(15deg);justify-content: center;display: flex;" alt="Homeflow"/>
+                    <img src="/assets/img/phone/homeflow.png" class="mx-auto" style="width: 15rem;transform: rotate(15deg);justify-content: center;display: flex;" alt="Homeflow"/>
                 </div>
             </div>
         </div>

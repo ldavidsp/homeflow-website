@@ -12,4 +12,36 @@
     }
 }
 
+.btn-homeflow-primary-squared {
+    background-color: $homeflow-color-primary;
+    border: 1px solid $homeflow-color-primary;
+    font-weight: 500;
+    height: 40px;
+    width: auto;
+    padding: 8px 20px 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-homeflow-primary-squared-button {
+    background-color: $homeflow-color-primary;
+    border: 1px solid $homeflow-color-primary;
+    font-weight: 500;
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 

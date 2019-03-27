@@ -18,11 +18,11 @@
 </head>
 <body>
 <div class="homeflow-app">
-    <nav class="navbar navbar-expand-md navbar-light homeflow-navbar fixed-top" id="homeflow-navbar" style="height: 58px;">
+    <nav class="navbar navbar-expand-md navbar-light homeflow-navbar fixed-top" id="homeflow-navbar"
+         style="height: 58px;">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{--{{ config('app.name', 'Laravel') }}--}}
-                <img src="/assets/img/logo/hf_logo_blue.png" alt="Homeflow" width="140"/>
+            <a class="navbar-brand" href="{{ 'http://'. env('MAIN_DOMAIN') }}">
+                <img src="/assets/img/logo/hf_logo_blue.png" alt="Homeflow" width="160"/>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -46,7 +46,7 @@
                                style="font-size: 15px;"
                                href="{{ url('business') }}">{{ __('Business') }}</a>
                         </li>--}}
-                        
+
                         <li class="nav-item">
                             <a class="nav-link homeflow-medium text-dark"
                                style="font-size: 15px;"
@@ -56,7 +56,7 @@
                             <li class="nav-item">
                                 <a class="nav-link homeflow-medium text-homeflow"
                                    style="font-size: 15px;"
-                                   href="{{ route('register') }}">{{ __('Crear tu espacio de trabajo') }}</a>
+                                   href="{{ url('create') }}">{{ __('Crear tu espacio homeflow') }}</a>
                             </li>
                         @endif
                     @else
