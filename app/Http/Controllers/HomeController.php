@@ -56,7 +56,7 @@ class HomeController extends Controller {
             $account->user_admin = "luisnic20@gmail.com";
 
             if ($account->save()) {
-                return redirect()->to($protocol.$acount_domain_url.'.'.env('MAIN_DOMAIN').'/create/account_user');
+                return redirect()->to($protocol.$acount_domain_url.'.'.env('MAIN_DOMAIN').'/create/account');
             }
         }
     }

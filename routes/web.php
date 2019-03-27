@@ -34,24 +34,32 @@ Route::domain(env('MAIN_DOMAIN'))->group(function () {
  */
 Route::domain('{account}.' . env('MAIN_DOMAIN'))->group(function () {
     Route::get('/', function ($account) {
-        $response = AccountDomain::where('account_domain', $account)->first();
 
-        if (!empty($response)) {
-            return view('auth.login', ['account' => $response->name]);
+        if (Auth::user()) {
+            return view('home');
         }
         else {
-            return response()->json([
-                'message' => 'Not found',
-            ]);
+            $response = AccountDomain::where('account_domain', $account)->first();
+
+            if (!empty($response)) {
+                return view('auth.login', ['account' => $response->name]);
+            }
+            else {
+                return response()->json([
+                    'message' => 'Not found',
+                ]);
+            }
         }
     });
 
     //Route::get('/create/account_user', 'HomeController@index')->name('create_user');
-    Route::get('/create/account_user', function () {
+    Route::get('/create/account', function () {
         return view('auth.register');
     });
 
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', function () {
+        return view('home');
+    });
 });
 
 Auth::routes();
